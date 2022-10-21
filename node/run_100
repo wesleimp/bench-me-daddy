@@ -1,5 +1,5 @@
 #!/bin/bash
 
 rm -rf plot.100qps.html results.100qps.bin
-echo "GET http://localhost:3001/index" | vegeta attack -duration=5s -rate=100 -name=100qps > results.100qps.bin 
+echo "GET http://localhost:3001/number" | vegeta attack -duration=5s -rate=100 -name=100qps > results.100qps.bin 
 cat results.100qps.bin | vegeta plot > plot.100qpl.html

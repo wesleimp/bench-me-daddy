@@ -10,9 +10,9 @@ app.use(function (req, _res, next) {
     console.log(`[${req.method}] ${req.path}`);
     next();
 });
-app.get("/index", function (_req, res) {
-    (0, runner_1.default)();
-    res.json({ ok: true });
+app.get("/number", function (_req, res) {
+    const mult = (0, runner_1.default)();
+    res.json({ ok: true, mult: mult });
 });
 app.listen(3001, function () {
     console.log("server running");
